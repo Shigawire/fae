@@ -44,7 +44,13 @@ module Fae
     def destroy
       @user.destroy
       respond_to do |format|
-        format.html { redirect_to users_url }
+        format.html do
+          if @user.errors.any?
+            redirect_to users_url, flash: { error: @user.errors.full_messages.to_sentence }
+          else
+            redirect_to users_url
+          end
+        end
         format.json { head :no_content }
       end
     end
