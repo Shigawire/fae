@@ -104,12 +104,12 @@ Fae.form.filtering = {
         // reset params and form selects
         _this.fry.merge({ page: '' }, true);
         $('#filter_search').val('');
-        $this.closest('form').find('select').val('').trigger('chosen:updated');
+        $this.closest('form').find('select,input').val('').trigger('chosen:updated');
         $this.hide();
       })
 
       // update hash when filter dropdowns changed
-      .on('change', 'select', function() {
+      .on('change', 'select,input', function() {
         // get key and value from select
         var key = $(this).attr('id').split('filter_')[1];
         var value = $(this).val();
