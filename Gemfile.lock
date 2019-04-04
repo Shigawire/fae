@@ -13,7 +13,7 @@ PATH
       acts_as_list (~> 0.9.11)
       browser (~> 2.5.3)
       carrierwave (~> 1.2.2)
-      devise (~> 4.4.3)
+      devise
       jquery-rails (~> 4.3.1)
       jquery-ui-rails (~> 6.0.1)
       judge (~> 3.0.0)
